@@ -4,42 +4,62 @@ este es tu primer proyecto de React, aquí te dejo tus apuntes majo
 
     Proyecto 1: boton reutilizable
 */
-
 import React from "react";
 import "./Button.css"
 
-const variant = [
-    "outlne",
+const variants = [
+    "outline",
     "text"
 ];
-const shadow = [
-    "disableShadow" ? "none" : "" 
+const shadows = [
+    "disableShadow",
+    "enableShadow"
 ];
 const disable = [
-    "disabled" ? "enabled" : "" 
+    "enable",
+    "disable"
 ];
-const size = [
-    "sm",
+const sizes = [
     "md",
+    "sm",
     "lg"
 ];
-const color = [
-    "primary",
+const colors = [
+    "default",
     "secondary",
     "danger",
-    "default",
+    "primary"
 ];
-const startIcon = [
-    "local_grocery_store" ? "none" : ""
-];
-const endIcon = [
-    "local_grocery_store" ? "none" : ""
-];
+
 //en la const en los parentesis puedes poner variables que vas a utilizar
 //esta tiene un return para devolver algo
-export const Button = () =>{
+
+export const Button = ({children, variant, size, color, shadow, disabled}) =>{
+
+    const hasColor = colors.includes(color) 
+    ? color 
+    : ""
+
+    const hasSize = sizes.includes(size) 
+    ? size 
+    : sizes[0]
+
+    const hasVariant = variants.includes(variant) 
+    ? variant 
+    : ""
+
+    const hasShadow = shadows.includes(shadow) 
+    ? shadow 
+    : ""
+
+    const hasDisabled = disable.includes(disabled) 
+    ? disabled 
+    : ""
+
+
     return(
-        <button className={`btn ${variant} ${color} `}>
+        <button className={`btn ${hasColor} ${hasSize} ${hasVariant} ${hasShadow} ${hasDisabled} `}>
+            {children}
         </button>
     )
 }
