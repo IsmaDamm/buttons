@@ -39,7 +39,7 @@ const endIcon = [
 //esta tiene un return para devolver algo
 export const Button = () =>{
     return(
-        <button >
+        <button className={`btn ${variant} ${color} `}>
         </button>
     )
 }
