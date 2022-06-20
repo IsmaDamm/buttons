@@ -34,11 +34,11 @@ const colors = [
 //en la const en los parentesis puedes poner variables que vas a utilizar
 //esta tiene un return para devolver algo
 
-export const Button = ({children, variant, size, color, shadow, disabled}) =>{
+export const Button = ({children, color, variant, size, shadow, disabled}) =>{
 
     const hasColor = colors.includes(color) 
     ? color 
-    : ""
+    : colors[0]
 
     const hasSize = sizes.includes(size) 
     ? size 

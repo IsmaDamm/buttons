@@ -2,10 +2,18 @@
     font-weight: 100;
     border-radius: 10px;
     border: none;
+    margin-bottom: 40px;
+    margin-top: 6px;
+}
+.default:hover{
+    background-color: #817d7d;
+}
+.default:focus{
+    background-color: #817d7d;
+}
+.default {
     color: black;
-    background: #817d7d;
-    transition: transform 0.3s ease;
-    margin: 10px;
+    background: #cfcbcb;
 }
 .outline{
     border-style:solid;
@@ -13,22 +21,50 @@
     color: #2962ff;
     background-color: white;
 }
+.outline:hover{
+    background-color: rgb(231, 231, 253);
+}
+.outline:focus{
+    background-color: rgb(231, 231, 253);
+}
 .text{
     border: none;
     color: #2962ff;
-    background: none;
+    background-color: unset;
+}
+.text:hover{
+    background-color: rgb(231, 231, 253);
+}
+.text:focus{
+    background-color: rgb(231, 231, 253);
 }
 .disableShadow{
     background-color: #2962ff;
     color: white;
 }
-.disable{
-    color: gainsboro;
-    opacity: 0.4;
+.disableShadow:hover{
+    background-color: #2962ff;
+}
+.disableShadow:focus{
+    background-color: #2962ff;
 }
 
-.btn:hover{
-    transform: translateX(3px);
+.disable{
+    background-color: #e0e0e0;
+}
+.default.disable:hover {
+    background-color: #e0e0e0;
+}
+  
+.text.disable:hover {
+    color: black;
+}
+.default.disable:focus {
+    background-color: #e0e0e0;
+}
+  
+.text.disable:focus {
+    background: rgb(231, 231, 253)
 }
 
 .primary{
@@ -44,11 +80,6 @@
 .danger {
   background-color: #d32f2f;
   color: white;
-}
-
-.default {
-    color: black;
-    background-color: #817d7d;
 }
 .sm {
     font-size: 12px;

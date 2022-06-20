@@ -3,16 +3,19 @@
   margin: 50px;
 }
 .container{
-  margin: 50px;
+display: flex;
+flex-direction: row;
+}
+h4{
+  color: gray;
 }
 p{
  font-size: small;
- color: gray;
  margin: 0px;
- margin-left: 10px;
 }
 .buttons {
-  
+  display:block;
+  margin-right: 100px;
 }
 
 .App-link {
